@@ -1,0 +1,42 @@
+/* base.css */
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #f5f5f5; /* Ring 7 for text */
+    background-color: #282526; /* Background color */
+}
+
+a {
+    color: #f5f5f5; /* Ring 7 */
+    text-decoration: none;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove rounded corners */
+img, .card {
+    border-radius: 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in;
+}

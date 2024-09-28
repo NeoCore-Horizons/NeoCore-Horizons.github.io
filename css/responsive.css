@@ -1,0 +1,62 @@
+/* responsive.css */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Mobile Navigation */
+    nav .nav-links {
+        flex-direction: column;
+        background-color: #383838; /* Ring 1 */
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        height: 100vh;
+        width: 200px;
+        padding-top: 20px;
+        transition: right 0.3s;
+    }
+
+    nav .nav-links.open {
+        right: 0;
+    }
+
+    nav .nav-links li {
+        margin: 20px 0;
+    }
+
+    /* Adjust Hero Section */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero-logo img {
+        width: 150px;
+    }
+
+    /* Vision Cards */
+    .vision-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Additional Styles for Modern Look */
+button, .nav-links a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Subtle Hover Effects */
+.nav-links a:hover {
+    color: #d3d3d3; /* Ring 6 */
+    transition: color 0.3s;
+}
