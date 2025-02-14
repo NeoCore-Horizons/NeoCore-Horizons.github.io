@@ -1,27 +1,27 @@
 .logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .logoImage {
-    display: block;
-    min-width: 280px;
-    width: 30vw; /* Make it responsive to viewport width */
-    max-width: 580px;
-    height: auto;
-    object-fit: contain;
+  display: block;
+  min-width: 280px;
+  width: 30vw; /* Make it responsive to viewport width */
+  max-width: 580px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Ensure minimum sizes at different breakpoints */
 @media (min-width: 768px) {
-    .logoImage {
-        min-width: 380px;
-    }
+  .logoImage {
+    min-width: 380px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .logoImage {
-        min-width: 480px;
-    }
-} 
+  .logoImage {
+    min-width: 480px;
+  }
+}

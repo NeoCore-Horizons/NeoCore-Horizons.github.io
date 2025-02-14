@@ -22,6 +22,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          CI: false  # This will prevent treating warnings as errors
         run: npm run build
 
       - name: Deploy

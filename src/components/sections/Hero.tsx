@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
       >
         <source src="/assets/videos/neoEye.mp4" type="video/mp4" />
       </video>
-      
+
       <div className={styles.heroWrapper}>
         <Logo className={styles.heroLogo} />
         <div className={styles.heroContent}>
@@ -24,9 +24,7 @@ export const Hero: React.FC = () => {
             <span className={styles.heroTitleLine}>Innovating for Tomorrow,</span>
             <span className={styles.heroTitleLine}>Shaping the Unknown</span>
           </h1>
-          <p className={styles.heroSubtitle}>
-            The core of technologies beyond today's horizon.
-          </p>
+          <p className={styles.heroSubtitle}>The core of technologies beyond today's horizon.</p>
         </div>
       </div>
     </section>

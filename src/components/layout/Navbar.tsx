@@ -13,15 +13,15 @@ export const Navbar: React.FC = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <img 
-          src="/assets/images/logoNoTxt.svg" 
-          alt="NeoCore Horizons Logo" 
-          title="NeoCore Horizons Logo" 
-          width={40} 
-          height={40} 
+        <img
+          src="/assets/images/logoNoTxt.svg"
+          alt="NeoCore Horizons Logo"
+          title="NeoCore Horizons Logo"
+          width={40}
+          height={40}
         />
       </div>
-      <div 
+      <div
         className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ''}`}
         aria-label="Toggle menu"
         role="button"
@@ -32,11 +32,25 @@ export const Navbar: React.FC = () => {
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
       </div>
-      <div className={`${styles.overlay} ${isMenuOpen ? styles.open : ''}`} onClick={toggleMenu}></div>
-      <ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`} aria-label="Main navigation">
-        <li><a href="#home" aria-current="page">Home</a></li>
-        <li><a href="#vision">Our Vision</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <div
+        className={`${styles.overlay} ${isMenuOpen ? styles.open : ''}`}
+        onClick={toggleMenu}
+      ></div>
+      <ul
+        className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}
+        aria-label="Main navigation"
+      >
+        <li>
+          <a href="#home" aria-current="page">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#vision">Our Vision</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   );
