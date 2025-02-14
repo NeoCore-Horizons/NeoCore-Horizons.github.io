@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Optimized Title for SEO -->
+    <title>NeoCore Horizons - Innovating the Future with AI and IoT Solutions</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="NeoCore Horizons pushes the boundaries of AI and IoT technologies, delivering innovative solutions that shape the future.">
+    <meta name="keywords" content="Innovating for tomorrow, shaping the unknown.">
+    <meta name="author" content="NeoCore Horizons">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="NeoCore Horizons - Shaping the Future of Technology">
+    <meta property="og:description" content="At NeoCore Horizons, we explore AI and IoT technologies to bring forward-thinking innovations for tomorrow's world.">
+    <meta property="og:image" content="https://www.neocorehorizons.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.neocorehorizons.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NeoCore Horizons - Pioneering AI and IoT Solutions">
+    <meta name="twitter:description" content="Pushing boundaries with AI, IoT, and innovative technologies that shape the future of tomorrow.">
+    <meta name="twitter:image" content="https://www.neocorehorizons.com/images/twitter-card.jpg">
+
+    <!-- Structured Data (Schema.org Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NeoCore Horizons",
+      "url": "https://www.neocorehorizons.com",
+      "logo": "https://www.neocorehorizons.com/images/logo.png",
+      "description": "Innovating for tomorrow, shaping the unknown.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@neocorehorizons.com",
+        "contactType": "Customer Support"
+      }
+    }
+    </script>
+
+    <!-- Added preconnect for potential third-party resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Added PWA manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Added initial-scale reset for iOS -->
+    <script>
+        // Prevents iOS font scaling after orientation changes
+        (function(doc) {
+            var addEvent = 'addEventListener',
+                type = 'gesturestart',
+                qsa = 'querySelectorAll',
+                scales = [1, 1],
+                meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+            function fix() {
+                meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+                doc.removeEventListener(type, fix, true);
+            }
+            if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+                fix();
+                scales = [0.25, 5.0];
+                doc[addEvent](type, fix, true);
+            }
+        }(document));
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #282526;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+</html>

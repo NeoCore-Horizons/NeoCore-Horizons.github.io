@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #282526;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+    background-color: #282526;
+}
+
+/* Add this to ensure all sections inherit the background */
+section {
+    background-color: #282526;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+} 
