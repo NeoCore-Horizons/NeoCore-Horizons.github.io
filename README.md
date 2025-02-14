@@ -1,3 +1,9 @@
-# NeoCore-Horizons.github.io
+# NeoCore Horizons Website
 
-no one can use the code without your explicit written permission.
+Official website for NeoCore Horizons.
+
+## Copyright
+
+© 2024 NeoCore Horizons. All rights reserved.
+
+This codebase is proprietary and confidential. No part of this codebase may be used without explicit written permission from NeoCore Horizons.
