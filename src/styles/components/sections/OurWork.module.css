@@ -1,0 +1,126 @@
+/* src/styles/components/sections/OurWork.module.css */
+.ourWork {
+    padding: 8rem var(--padding-x) 4rem;
+    background-color: #282526;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .ourWork h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: #ffffff;
+  }
+  
+  .sectionIntro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .projectCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .projectImageContainer {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .projectImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 180px;
+    object-fit: contain;
+  }
+  
+  .projectCard:hover .projectImage {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  
+  .projectContent {
+    padding: 1.5rem;
+  }
+  
+  .projectContent h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .projectDescription {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .technologiesContainer, 
+  .impactContainer {
+    margin-top: 1.5rem;
+  }
+  
+  .technologiesContainer h4,
+  .impactContainer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .technologiesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .technologyTag {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projectsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

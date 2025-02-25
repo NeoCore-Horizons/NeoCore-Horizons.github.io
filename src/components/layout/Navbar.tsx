@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../../styles/components/layout/Navbar.module.css';
-// ... rest of the file
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,16 +10,23 @@ export const Navbar: React.FC = () => {
     document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = '';
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <img
-          src="/assets/images/logoNoTxt.svg"
-          alt="NeoCore Horizons Logo"
-          title="NeoCore Horizons Logo"
-          width={40}
-          height={40}
-        />
+        <Link to="/" onClick={closeMenu}>
+          <img
+            src="/assets/images/logoNoTxt.svg"
+            alt="NeoCore Horizons Logo"
+            title="NeoCore Horizons Logo"
+            width={40}
+            height={40}
+          />
+        </Link>
       </div>
       <div
         className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ''}`}
@@ -41,15 +48,24 @@ export const Navbar: React.FC = () => {
         aria-label="Main navigation"
       >
         <li>
-          <a href="#home" aria-current="page">
+          <Link to="/" onClick={closeMenu}>
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#vision">Our Vision</a>
+          <Link to="/#vision" onClick={closeMenu}>
+            Our Vision
+          </Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/our-work" onClick={closeMenu}>
+            Our Work
+          </Link>
+        </li>
+        <li>
+          <Link to="/#contact" onClick={closeMenu}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>
