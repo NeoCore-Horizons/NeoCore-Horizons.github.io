@@ -22,11 +22,16 @@ const HomePage: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  // Get the base URL for GitHub Pages compatibility
+  const baseName = process.env.PUBLIC_URL || '';
+
   return (
-    <Router>
+    <Router basename={baseName}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/our-work" element={<OurWorkPage />} />
+        {/* Add a catch-all route that redirects to home */}
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
   );
