@@ -83,19 +83,35 @@
 
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-        // Single page apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
-        (function(l) {
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
         if (l.search[1] === '/' ) {
-            var decoded = l.search.slice(1).split('&').map(function(s) { 
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
-            }).join('?');
-            window.history.replaceState(null, null,
-                l.pathname.slice(0, -1) + decoded + l.hash
-            );
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
-        }(window.location))
+        
+        // This handles the case where "?p=/path" is in the URL
+        if (l.search.indexOf('?p=') === 0) {
+          var path = l.search.substring(3);
+          var queryStart = path.indexOf('&');
+          var query = '';
+          
+          if (queryStart !== -1) {
+            query = '?' + path.substring(queryStart + 1).replace(/~and~/g, '&');
+            path = path.substring(0, queryStart);
+          }
+          
+          window.history.replaceState(null, null,
+              l.pathname + path + query + l.hash
+          );
+        }
+      }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
