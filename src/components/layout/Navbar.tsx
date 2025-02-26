@@ -53,8 +53,8 @@ export const Navbar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/#vision" onClick={closeMenu}>
-            Our Vision
+          <Link to="/services" onClick={closeMenu}>
+            Our Services
           </Link>
         </li>
         <li>

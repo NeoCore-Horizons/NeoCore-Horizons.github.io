@@ -3,6 +3,12 @@ export interface VisionCard {
   description: string;
 }
 
+export interface ServiceCard {
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface Project {
   id: string;
   title: string;
