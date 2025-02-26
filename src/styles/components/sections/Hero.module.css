@@ -95,4 +95,71 @@
   }
 }
 
-/* Rest of your hero styles, but with .heroWrapper instead of .hero-wrapper, etc. */
+/* Add these styles to your existing Hero.module.css */
+
+.videoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.posterBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../assets/images/video-poster.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.backgroundVideo.loaded {
+  opacity: 1;
+}
+
+.videoPlaying .posterBackground {
+  opacity: 0;
+}
+
+/* To ensure the overlay sits above both the poster and video */
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 37, 38, 0.7);
+  z-index: 1;
+}
+
+/* Ensure the content sits above everything */
+.heroWrapper {
+  position: relative;
+  z-index: 2;
+}

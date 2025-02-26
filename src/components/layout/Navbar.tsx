@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../styles/components/layout/Navbar.module.css';
+import { scrollToSection } from '../../utils/scrollUtils';
+
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,10 +65,21 @@ export const Navbar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/#contact" onClick={closeMenu}>
+          <Link 
+            to="/#contact" 
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              
+              if (!scrollToSection('contact')) {
+                // If we're not on the home page, navigate to home page with the contact hash
+                window.location.href = '/#contact';
+              }
+            }}
+          >
             Contact
           </Link>
-        </li>
+      </li>
       </ul>
     </nav>
   );
